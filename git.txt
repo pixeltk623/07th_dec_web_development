@@ -1,0 +1,13 @@
+git pull
+
+git status
+
+git add . => All files
+
+git add "index.html"
+
+git commit -m "Message"
+
+git push 
+
+
