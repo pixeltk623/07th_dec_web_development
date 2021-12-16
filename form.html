@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center><h1>Form In HTML</h1></center>
+	<!-- method="" action="" enctype="" disabled readonly -->
+	<fieldset>
+	<legend>Registration Form</legend>
+	<form method="POST" action="" enctype="multipart/form-data">
+		<label>Name</label>
+		<input type="text" name="name" value="" placeholder="Enter Your Name" >
+		<br><br>
+		<label>Email</label>
+		<input type="email" name="email" required>
+		<br><br>
+		<label>Mobile</label>
+		<input type="number" name="text" >
+		<br><br>
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="Male" checked>Male
+		<input type="radio" name="gender" value="Female">Female
+		<input type="radio" name="gender" value="Others">Others
+
+		<br><br>
+
+		<label>Hobby</label>
+
+		<input type="checkbox" name="hobby" value="Cricket">Cricket
+		<input type="checkbox" name="hobby" value="Football">Football
+		<input type="checkbox" name="hobby" value="Baseball">Baseball
+		<input type="checkbox" name="hobby" value="Badminton">Badminton
+
+		<br><br>
+
+		<label>City:</label>
+		<select name="city" required>
+			<option value="">Select</option>
+			<option value="Vadodara">Vadodara</option>
+			<option value="Ranchi">Ranchi</option>
+			<option value="Patna" selected>Patna</option>
+			<option value="Delhi">Delhi</option>
+		</select>
+
+		<br><br>
+
+		<label>Range</label>
+		<input type="range" name="" min="0" max="5" value="1">
+		<br><br>
+
+		<label>Color</label>
+		<input type="color" name="">
+		<br><br>
+		<label>Date</label>
+		<input type="date" name="" min="2021-10-12" max="2021-12-12" value="2021-11-12">
+		<br><br>
+		<label>Date & Time</label>
+
+		<input type="datetime-local" name="">
+
+		<br><br>
+
+		<label>Time</label>
+		<input type="time" name="">
+
+		<br><br>
+
+		<label>Month</label>
+
+		<input type="month" name="">
+
+		<br><br>
+
+		<label>Week</label>
+
+		<input type="week" name="">
+
+		<br><br>
+
+		<label>Url</label>
+
+		<input type="url" name="">
+		<br><br>
+		<input type="tel">
+
+		<br><br>
+
+		<label>Password</label>
+		<input type="Password" name="">
+		<br><br>
+		<label>Address</label>
+		<textarea name="address" cols="50" rows="5"></textarea>
+		<br><br>
+		<label>Profile Pic</label>
+		<input type="file" name="Profile" multiple>
+		<br><br>
+		<input type="submit" name="submit">
+		<input type="reset" name="reset">
+	</form>
+</fieldset>
+</body>
+</html>
