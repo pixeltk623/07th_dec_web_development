@@ -1,6 +1,7 @@
-// in greet.js
-function greet() {
-    // strict by default
-}
+// exporting the variable
+export const name = 'JavaScript Program';
 
-export greet();
+// exporting the function
+export function sum(x, y) {
+    return x + y;
+}
