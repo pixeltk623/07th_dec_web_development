@@ -29,3 +29,20 @@ console.log(++a)
 
 console.log(a)
 
+
+//area of rectangle
+  let l, w, c;
+    l = 8;
+    w = 6;
+  console.log  (c = l * w);
+    
+
+    //area of circle
+function circleArea(radius) {
+    let area = Math.PI * (radius * radius);
+    console.log(area);
+    console.log(Math.round(area*100)/100);
+}
+ 
+circleArea(5);
+
