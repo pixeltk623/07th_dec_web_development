@@ -195,3 +195,269 @@
 // 	console.log("GN")
 // }
 
+// let currentDate = new Date();
+// switch(true) {
+// 	case (currentDate.getHours()>=6 && currentDate.getHours()<=12):
+// 		console.log("GM");
+// 		break;
+// 	case (currentDate.getHours()>=13 && currentDate.getHours()<=16):
+// 		console.log('GA');
+// 		break;
+// 	case (currentDate.getHours()>=17 && currentDate.getHours()<=20):
+// 		console.log('GE');
+// 		break;
+// 	case (currentDate.getHours()>=21):
+// 		console.log('GN');
+// 		break;
+// 	default:
+// 		console.log("Error")
+// 		break;
+// }
+
+// let hours = currentDate.getHours();
+// switch(hours) {
+// 	case hours>=6 && time<=12:
+// 		console.log("GM");
+// 		break;
+// 	case 2:
+// 		console.log('GA');
+// 		break;
+// 	case 18:
+// 		console.log('GE');
+// 		break;
+// 	case 4:
+// 		console.log('GN');
+// 		break;
+// 	default:
+// 		console.log("Error")
+// 		break;
+// }
+
+// let day = 'Fri';
+// switch(day) {
+// 	case 'Mon':
+// 		console.log("Mon");
+// 		break;
+// 	case 'Tue':
+// 		console.log("Tue");
+// 		break;
+// 	case 'Wed':
+// 		console.log("Wed");
+// 		break;
+// 	case 'Thu':
+// 		console.log("Thu");
+// 		break;
+// 	case 'Fri':
+// 		console.log("Fri");
+// 		break;
+// 	case 'Sat':
+// 		console.log("Sat");
+// 		break;
+// 	case 'Sun':
+// 		console.log("Sun");
+// 		break;
+// 	default:
+// 		console.log("Error")
+// 		break;
+// }
+
+
+// let num1 = parseInt(prompt("Enter The First Number"));
+// let num2 = parseInt(prompt("Enter The Second Number"));
+
+// let operator = prompt("Enter The operator");
+
+// switch(operator) {
+
+// 	case '+':
+// 		console.log(num1+num2)
+// 		break;
+// 	case '-':
+// 		console.log(num1-num2)
+// 		break;
+// 	case '*':
+// 		console.log(num1*num2)
+// 		break;
+// 	case '/':
+// 		console.log(num1/num2)
+// 		break;
+// 	default:
+// 		console.log("Error")
+// 		break;
+
+// }
+
+
+// For Loop 
+
+//  While loop
+
+// Do While  Loop
+
+// Foreach loop
+
+// For In 
+
+// For off
+
+
+// for (let i = 1; i<=10; i++) {
+// 	console.log(i+ " Riddhi Patel")
+// }
+
+
+// for (let i = 10; i>=1; i--) {
+// 	console.log(i+ " Riddhi Patel")
+// }
+
+
+// for(let i = 1; i<=10; i++) {
+
+// 	if(i==3 || i==6 || i==9) {
+// 		continue;
+// 	}
+
+// 	console.log(i, "Hello")
+// }
+
+
+
+// for(let i = 1; i<=10; i++) {
+	
+// 	// if(i>5) {
+// 	// 	console.log(i, "Ashmi");
+// 	// } else {
+// 	// 	console.log(i, "Riddhi Patel")
+// 	// }
+
+// 	if (i%2==0) {
+// 		console.log(i, "Riddhi Patel")
+// 	} else {
+// 		console.log(i, "Ashmi");
+// 	}
+
+// }
+
+// let sum = 0;
+// for (let i = 1; i <= 10; i++) {
+// 	//console.log(i)
+// 	sum = sum + i; // 0 + 1 // 1
+
+// }
+
+// console.log(sum)
+
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+// 5 * 1 = 5
+
+
+
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+// console.log("Riddhi Patel")
+
+// let n = parseInt(prompt("Table"));
+
+// for(let i = 1; i<=10; i++) {
+
+// 	console.log(n + " * "+ i + " = " + n*i)
+
+// }
+
+// let sumOfEven = 0;
+// let sumOfOdd = 0;
+// for(let i=1; i<=100; i++) {
+
+// 	if (i%2!=0) {
+// 		sumOfOdd = sumOfOdd + i;
+// 	} else {
+// 		sumOfEven = sumOfEven + i;
+// 	}
+
+// }
+// console.log('Even ', sumOfEven)
+// console.log('Odd ', sumOfOdd)
+
+
+
+// let n = 8
+
+// let fact = 1;
+
+// if (n>=0) {
+
+// 	if(n==0 || n==1) {
+// 		console.log('Fact of '+n+' is '+fact);
+// 	} else {
+
+// 		for(let i=n; i>=1; i--) {
+// 			fact  = fact *i;
+// 		}
+
+// 		console.log('Fact of '+n+' is '+fact);
+// 	}
+
+// } else {
+// 	console.log(n, ' Fact is Not Possible');
+// }
+
+// let i = 1;
+
+// while(i<=10) {
+// 	console.log(i)
+
+// 	i++;
+// }
+
+
+// let i = 1;
+
+// while(true) {
+// 	console.log(i)
+
+// 	i++;
+// }
+
+
+
+// let i = 1;
+
+// while(i<=10) {
+
+// 	if(i%2==0) {
+// 		console.log(i);
+// 	}
+// 	i++;
+// }
+
+
+// Q1. Prime No 
+// Q2 . List of Prime No from 1 to 100 
+// Q3. Reverse Number > 123 => 321
+// Q4. Count of Digits => 123 => 3 
+// Q5. Palindrome No  => 313 => 313 
+// Q6. Armstrong No 153 => 153
+
+// Q5. Palindrome No  => 313 => 313 (1 - 1000) 
+// Q6. Armstrong No 153 => 153 (1 - 1000)
+
+
