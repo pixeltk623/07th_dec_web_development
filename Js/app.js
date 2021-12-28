@@ -452,6 +452,7 @@
 
 // Q1. Prime No 
 // Q2 . List of Prime No from 1 to 100 
+
 // Q3. Reverse Number > 123 => 321
 // Q4. Count of Digits => 123 => 3 
 // Q5. Palindrome No  => 313 => 313 
@@ -459,5 +460,206 @@
 
 // Q5. Palindrome No  => 313 => 313 (1 - 1000) 
 // Q6. Armstrong No 153 => 153 (1 - 1000)
+/*let count =0
+let i,j
+for(j=2;j<=100;j++){
+}
+for(i=1;i<=j;i++){
+	if(i%2)
+	count++	
+}*/
+
+// let n = 18
+// let count = 0
+// for(let i = 1;i <= n; i++){
+// 	if(n%i == 0){
+// 		count++
+// 	}
+// }
+// console.log(count);
+// if (count == 2){
+// 	console.log("The number is prime",n);
+// }
+// else{
+// 	console.log("The number is not prime",n);
+// }
+
+// for(let i=1; i<=100; i++) {
+// 	let count = 0
+// 	for(let j = 1;j <= i; j++){
+// 		if(i%j == 0){
+// 			count++
+// 		}
+// 	}
+
+// 	if (count == 2){
+// 		console.log("The number is prime",i);
+// 	}
+// 	else{
+// 		console.log("The number is not prime",i);
+// 	}
+// }
+
+// let ele = document.getElementById('table')
+
+// console.log(ele.innerHTML = "<h1>Hello</h1>")
+
+// let html = `<table border="1" style="border-collapse:collapse; width: 100%;">
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+// 		<tr>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 			<td></td>
+// 		</tr>
+
+// 	</table>`;
+// ele.innerHTML = html;
+// 	console.log(html)
+
+// let html = "";
+
+// html += '<table border="1" style="border-collapse:collapse; width: 100%;">' 
+// 	for(let i=1; i<=8; i++) {
+// 		html +=	'<tr>';
+// 			for(let j=1; j<=8; j++) {
+// 				let sum = i+j
+
+// 				if(sum%2==0) {
+// 					html +=	'<td style="background-color: black;">Black</td>';	
+// 				} else {
+// 					html +=	'<td></td>';	
+// 				}
+// 			}
+// 		html +=	'</tr>';
+// 	}
+// html += "</table>" 
+
+// ele.innerHTML = html
+
+// let ele = document.getElementById('table')
+
+// ele.innerHTML = "Hello";
+// ele.style.fontSize = "50px"
+// ele.style.color = "red"
 
 
+// document.getElementById("myElement").style.cssText = "display: block; position: absolute";
+
+
+// let eleC = document.getElementsByClassName('result');
+// eleC[0].innerHTML="Hello This is Kumar"
+// // console.log(eleC)
+// console.log(eleC[0].style)
+// console.log(eleC[0].style.cssText)
+
+// console.log(eleC[0].style.cssText= 'color:red;font-size:50px;margin:50px;')
+
+// let eleC = document.getElementsByClassName('result');
+
+// console.log(eleC)
+
+// for(let i=0; i<eleC.length; i++) {
+
+// 	if(i%2==0) {
+// 		console.log(eleC[i].style.color="green")
+// 	} else {
+// 		console.log(eleC[i].style.color="red")
+// 	}
+
+	
+// }
+
+function getValue() {
+	let nameOfUser = document.getElementById('name').value;
+
+	// console.log(nameOfUser)
+
+	if(nameOfUser=='') {
+		document.getElementById("e1").innerHTML = "Name Can Not be blank";
+		document.getElementById("e1").style.color = "red";
+		console.log("Name Can Not be blank")
+	} else {
+		document.getElementById("e1").innerHTML = "";
+		console.log(nameOfUser)
+
+		document.getElementById("data").innerHTML = nameOfUser;
+	}
+}
+
+function setValue() {
+	document.getElementById('name').value = "Kumar";
+}
