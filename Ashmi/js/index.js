@@ -46,3 +46,109 @@ function circleArea(radius) {
  
 circleArea(5);
 
+
+
+
+//q1.prime no
+function test_prime(n)
+{
+
+  if (n===1)
+  {
+    return false;
+  }
+  else if(n === 2)
+  {
+    return true;
+  }else
+  {
+    for(let x = 2; x < n; x++)
+    {
+      if(n % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
+}
+
+console.log(test_prime(37));
+
+
+
+//  q2.prime no 1 to 100
+
+let count=0
+let i,j 
+for(j=2;j<=100;j++)
+{
+for( i=1;i<=j;i++)
+{
+  if(j%i==0)
+  count++
+  
+}
+
+if(count==2)
+
+console.log(j)
+count=0
+
+
+  
+}
+
+//q3.reverse number 
+
+const num = 124323;
+const reverse = (num) => parseInt(String(num)
+.split("")
+.reverse()
+.join(""), 10);
+console.log(reverse(num));
+
+
+
+//q4.armstrong number
+function isArmstrong (n) {
+    const res = parseInt(n, 10) === String(n)
+        .split('')
+        .reduce((sum, n) => parseInt(sum, 10) + n ** 3, 0);
+    console.log(n, 'is', res, 'Armstrong number')
+    return res
+}
+
+isArmstrong(153)
+
+
+
+//q5.count of digits
+const number = 4567 ;
+const digits = (number, count = 0) => {
+   if(number){
+      return digits(Math.floor(number / 10), ++count);
+   };
+   return count;
+};
+console.log(digits(number));
+
+
+//q6.palindrome number
+function isPalindrome(n) {
+    if (n == reverse(n)) return true
+}
+
+function sumArray(arr) {
+    var sum = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 10 && isPalindrome(arr[i])) {
+            sum += arr[i]
+        }
+        
+    }
+    console.log(sum);    
+}
+
+
+sumArray([313])
