@@ -134,3 +134,21 @@ const digits = (number, count = 0) => {
 console.log(digits(number));
 
 
+
+function isPalindrome(n) {
+    if (n == reverse(n)) return true
+}
+
+function sumArray(arr) {
+    var sum = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 10 && isPalindrome(arr[i])) {
+            sum += arr[i]
+        }
+        
+    }
+    console.log(sum);    
+}
+
+
+sumArray([313])
