@@ -119,7 +119,7 @@ function isArmstrong (n) {
     return res
 }
 
-isArmstrong(143)
+isArmstrong(153)
 
 
 
@@ -134,7 +134,7 @@ const digits = (number, count = 0) => {
 console.log(digits(number));
 
 
-
+//q6.palindrome number
 function isPalindrome(n) {
     if (n == reverse(n)) return true
 }
