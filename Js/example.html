@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		for(let i = 100; i<=999; i++) {
+			var reverse = 0;
+			let j = i;
+			while(j != 0) { 
+				reverse = reverse * 10; // 0 // 30 320
+				reverse = reverse + (j % 10); // 0 + (3) // 3 // 30 + 2 // 32 // 321
+				j = Math.floor(j / 10); // 12 
+			}
+
+			if(i==reverse) {
+				console.log(i + " is a palindrome number");
+			} else {
+				console.log(i + " is not a palindrome number");
+			}
+		}
+
+		// console.log(reverse)
+		// console.log(Num1)
+
+		// if (Num1 == reverse)
+		// console.log(Num1 +" is a palindrome number");
+		// else
+		// console.log(Num1 +" is not a palindrome number");
+	</script>
+
+</body>
+</html>
