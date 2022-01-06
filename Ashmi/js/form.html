@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form method="POST" id="myform" enctype="multipart">
+<label>Name</label>
+<input type="text" name="name" id="name">
+<span id="e1"></span>
+<br><br>
+<label>Gender</label>
+<input type="radio" name="gender"value="male">Male
+<input type="radio" name="gender"value="female">Female
+<input type="radio" name="gender"value="others">Others
+<span id="e2"></span>
+<br><br>
+		<label>Hobby: </label>
+		<input type="checkbox" name="hobby" value="Cricket">Cricket
+		<input type="checkbox" name="hobby" value="Football">Football
+		<input type="checkbox" name="hobby" value="Baseball">Baseball
+		<span id="e3"></span>
+		<br><br>
+		<label>City</label>
+		<select name="city" id="city">
+			<option value="">Select</option>
+			<option value="Vadodara">Vadodara</option>
+			<option value="Surat">Surat</option>
+			<option value="Anand">Anand</option>
+		</select>
+		<span id="e4"></span>
+		<br><br>
+
+		<label>File</label>
+		<input type="file" name="ProfilePic" class="ProfilePic">
+		<!-- <span id="e4"></span> -->
+		<br><br>
+		<input type="submit" name="submit" onclick="return validateForm();">
+	</form>
+	<br><br>
+
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		function validateForm() {
+			let nameOfUser = document.getElementById('name').value;
+			let gender = document.getElementsByName('gender');
+			let hobby = document.getElementsByName('hobby');
+			let city = document.getElementById("city").value;
+			let profilePic = document.getElementsByClassName('ProfilePic');
+			// let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+
+			console.log(profilePic)
+
+			let genderValue = '';
+			let hobbyValue = [];
+
+			//console.log(city)
+
+			// console.log(gender[0].checked)
+			for(let i=0; i<gender.length; i++) {
+				if (gender[i].checked) {
+					genderValue = gender[i].value;
+				}
+			}
+
+			for(let i=0; i<hobby.length; i++) {
+				if (hobby[i].checked) {
+					hobbyValue.push(hobby[i].value);
+				}
+			}
+
+			//console.log(hobbyValue);
+
+			if (hobbyValue.length==0) {
+				document.getElementById('e3').innerHTML = "Hobby is Not Selected";
+				document.getElementById('e3').style.color = "red";
+			} else {
+				if (hobbyValue.length==1) {
+					document.getElementById('e3').innerHTML = "Minimum 2 Selection is Required";
+					document.getElementById('e3').style.color = "red";
+				} else {
+					document.getElementById('e3').innerHTML = "";
+				}
+			}
+
+			if (genderValue=='') {
+				//console.log("Name Can Not blank")
+				document.getElementById('e2').innerHTML = "Gender is Not Selected";
+				document.getElementById('e2').style.color = "red";
+			} else { 
+				document.getElementById('e2').innerHTML = "";
+			}
+
+			if (city=='') {
+				//console.log("Name Can Not blank")
+				document.getElementById('e4').innerHTML = "City is Not Selected";
+				document.getElementById('e4').style.color = "red";
+			} else { 
+				document.getElementById('e4').innerHTML = "";
+			}
+
+			if (nameOfUser=='') {
+				//console.log("Name Can Not blank")
+				document.getElementById('e1').innerHTML = "Name Can Not be blank";
+				document.getElementById('e1').style.color = "red";
+			} else {
+				if (nameOfUser.length<3) {
+					//console.log("Minimum 3 Char is Required")
+					document.getElementById('e1').innerHTML = "Minimum 3 Char is Required";
+					document.getElementById('e1').style.color = "red";
+				} else {
+					document.getElementById('e1').innerHTML = "";
+				}
+				
+			}
+
+// if(profilePic==''){
+// 	document.getElementsByClassName('ProfilePic').innerHTML ="";
+// }else{
+// 	if(profilePic=='1'){
+// 	document.getElementsByClassName('ProfilePic').innerHTML ="image must be in jpg format";
+// }else{
+
+// }
+			if (nameOfUser.length>2 && genderValue!='' && hobbyValue.length>1 && city!='') {
+				
+				//document.getElementById('name').value = '';
+				document.getElementById("myForm").reset();
+
+				console.log(nameOfUser);
+				console.log(genderValue);
+
+				console.log(hobbyValue);
+				console.log(city);
+				console.log(profilePic);
+				let table = '';
+				table += '<table border="1" style="border-collapse:collapse; width: 50%;">';
+					table += '<tr>';
+						table += '<th>Name</th>';
+						table += '<td>'+nameOfUser+'</td>';
+					table += '</tr>';
+					table += '<tr>';
+						table += '<th>Gender</th>';
+						table += '<td>'+genderValue+'</td>';
+					table += '</tr>';
+					table += '<tr>';
+						table += '<th>Hobby</th>';
+						table += '<td>'+hobbyValue+'</td>';
+					table += '</tr>';
+					table += '<tr>';
+						table += '<th>City</th>';
+						table += '<td>'+city+'</td>';
+						table += '</tr>';
+						
+						table += '<tr>';
+						table += '<th>profilePic</th>';
+						table += '<td>'+profilePic+'</td>';
+						
+					table += '</tr>';
+				table += '</table>';
+
+				document.getElementById('result').innerHTML = table;
+			}
+
+			//console.log(nameOfUser)
+			return false;
+		}
+	</script>
+</body>
+
+</html>
