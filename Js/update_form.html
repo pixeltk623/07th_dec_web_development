@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		table tr th,td {
+			padding: 10px;
+		}
+		span {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<form method="POST" id="myForm" enctype="multipart/form-data">
+		<label>Name: </label>
+		<input type="text" name="name" id="name">
+		<span id="e1"></span>
+		<br><br>
+		<label>Gender: </label>
+		<input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="Female">Female
+		<input type="radio" name="gender" value="Others">Others
+		<span id="e2"></span>
+		<br><br>
+		<label>Hobby: </label>
+		<input type="checkbox" name="hobby" value="Cricket">Cricket
+		<input type="checkbox" name="hobby" value="Football">Football
+		<input type="checkbox" name="hobby" value="Baseball">Baseball
+		<span id="e3"></span>
+		<br><br>
+		<label>City</label>
+		<select name="city" id="city">
+			<option value="">Select</option>
+			<option value="Vadodara">Vadodara</option>
+			<option value="Surat">Surat</option>
+			<option value="Anand">Anand</option>
+		</select>
+		<span id="e4"></span>
+		<br><br>
+
+		<label>File</label>
+		<input type="file" name="fileUpload" class="ProfilePic">
+		<span id="File"></span>
+		<br><br>
+		<input type="submit" name="submit" onclick="return validateForm();">
+	</form>
+	<br><br>
+
+	<button type="button" onclick="editFormData();">Edit</button>
+
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		let nameOfUser = "Sharvan";
+		let genderValue = "Male";
+		let hobbyValue = ["Football"]
+		let city =  "Vadodara";
+
+		function editFormData() {
+			document.getElementById("name").value = nameOfUser;
+
+			let gender = document.getElementsByName("gender");
+			let hobby = document.getElementsByName("hobby");
+
+			for(let i=0; i<gender.length; i++) {
+
+				if(gender[i].value==genderValue) {
+					gender[i].checked = true;			
+				} else {
+					gender[i].checked = false;
+				}
+				
+			}
+
+			for(let i=0; i<hobby.length; i++) {
+				if(hobbyValue.includes(hobby[i].value)) {
+					hobby[i].checked = true;
+				} else {
+					hobby[i].checked = false;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
+
+<!-- Name => Blank | Min char 3 => Name can Not be blank | Min char is 3
+Gender => 1 Selected 
+Hobby => Selected Min 2 |  You have not selected | Minimum 2 
+City => 1 selected -->

@@ -8,6 +8,9 @@
 		table tr th,td {
 			padding: 10px;
 		}
+		span {
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -40,7 +43,8 @@
 		<br><br>
 
 		<label>File</label>
-		<input type="file" name="ProfilePic" class="ProfilePic">
+		<input type="file" name="fileUpload" class="ProfilePic">
+		<span id="File"></span>
 		<br><br>
 		<input type="submit" name="submit" onclick="return validateForm();">
 	</form>
@@ -54,12 +58,13 @@
 			let gender = document.getElementsByName('gender');
 			let hobby = document.getElementsByName('hobby');
 			let city = document.getElementById("city").value;
-			let profilePic = document.getElementsByClassName('ProfilePic');
-
-			console.log(profilePic)
+			let profilePic = document.getElementsByClassName("ProfilePic")[0].files;
+			let fileError = document.getElementById("File");
 
 			let genderValue = '';
 			let hobbyValue = [];
+
+			let fileStatus = false;
 
 			//console.log(city)
 
@@ -121,9 +126,32 @@
 				
 			}
 
-			if (nameOfUser.length>2 && genderValue!='' && hobbyValue.length>1 && city!='') {
+			if (profilePic.length<1) {
+				fileError.innerHTML = "ProfilePic is Not Selected";
+			} else {
+				let filesInfo = profilePic[0]
+				let fileSize = parseInt((filesInfo.size)/1024);
+				let fileName = filesInfo.name
+				let ext = fileName.split(".")[1].toLowerCase();
+				if (fileSize>=50) {
+					if (fileSize<=200) {
+						if (ext!='jpeg' && ext!='png' && ext!='jpg') {
+							fileError.innerHTML = "Invalid Format Allowed Extension is (JPG, PNG, JPEG)";
+						} else {
+							fileError.innerHTML = "";
+							fileStatus = true;
+						}
+					} else {
+						fileError.innerHTML = "File Size is too Big";
+					}
+				} else {
+					fileError.innerHTML = "File Size is too small";
+				}
+			}
+
+			if (nameOfUser.length>2 && genderValue!='' && hobbyValue.length>1 && city!='' && fileStatus==true) {
 				
-				//document.getElementById('name').value = '';
+				document.getElementById('name').value = '';
 				document.getElementById("myForm").reset();
 
 				console.log(nameOfUser);
