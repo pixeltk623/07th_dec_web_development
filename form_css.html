@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+			/*padding: 0;
+			margin: 0;*/
+			font-family: 'Urbanist', sans-serif;
+		}
+
+		#header {
+			text-align: center;
+		}
+
+		#header h1 {
+			color: lightblue;
+		}
+
+		.main {
+			background-color: #ededed;
+			padding: 10px;
+		}
+
+		.col-30 {
+			width: 25%;
+			float: left;
+		}
+
+		label {
+			display: inline-block;
+			margin-top: 12px;
+		}
+		.row {
+			margin: 10px;
+		}
+		.col-70 {
+			width: 75%;
+			float: left;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		input,select,textarea {
+			width: 100%;
+			padding: 12px;
+			border-radius: 10px;
+			border: 1px solid lightgrey;
+		}
+
+		textarea {
+			height: 180px;
+		}
+		button {
+			float: right;
+			background-color: lightgreen;
+			color: white;
+			border: none;
+			padding: 14px 25px;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+
+		button:hover {
+			background-color: green;
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px){
+    		.col-30 {
+    			width: 100%;
+    		}
+
+    		.col-70 {
+    			width: 100%;
+    		}
+
+    		label {
+    			margin-top: 0px;
+    			padding: 7px;
+    		}
+    		button {
+    			width: 100%;
+    		}
+		}
+	</style>
+</head>
+<body>
+
+	<div id="header">
+		<h1>Form In CSS</h1>
+		<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+	</div>
+
+	<div class="main">
+		<div class="row">
+			<div class="col-30">
+				<label>First Name</label>
+			</div>
+			<div class="col-70">
+				<input type="text" name="" placeholder="Your Name..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-30">
+				<label>Last Name</label>
+			</div>
+			<div class="col-70">
+				<input type="text" name="" placeholder="Last Name..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-30">
+				<label>Country</label>
+			</div>
+			<div class="col-70">
+				<select>
+					<option>India</option>
+					<option>USA</option>
+					<option>UK</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-30">
+				<label>Subject</label>
+			</div>
+			<div class="col-70">
+				<textarea placeholder="Write Something.."></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<button>Submit</button>
+		</div>
+	</div>
+
+</body>
+</html>
